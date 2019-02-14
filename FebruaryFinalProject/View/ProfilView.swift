@@ -1,5 +1,5 @@
 //
-//  SignUpView.swift
+//  ProgilView.swift
 //  FebruaryFinalProject
 //
 //  Created by Andrea SERRANO on 14/02/2019.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class SignUpView: UIView {
+class ProfilView: UIView {
 
     @IBOutlet var contentView: UIView!
-    var delegate : SignUpDelegate?
+    @IBOutlet var mail: UILabel!
+    
+    var delegate : ProfilDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,14 +27,14 @@ class SignUpView: UIView {
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("SignUpView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("ProfilView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
     @IBAction func login(_ sender: Any) {
-        delegate?.getToLogin()
+        delegate?.goToLogin()
     }
     
 }

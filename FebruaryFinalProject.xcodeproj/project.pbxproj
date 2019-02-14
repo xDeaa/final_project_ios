@@ -21,7 +21,10 @@
 		4D9AC4D52215584C00198655 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4D42215584C00198655 /* SignInView.swift */; };
 		4D9AC4D72215585E00198655 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4D62215585E00198655 /* ProfilView.swift */; };
 		4D9AC4D922156FD900198655 /* SignInViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4D822156FD900198655 /* SignInViewDelegate.swift */; };
-		4D9AC4DB22156FF000198655 /* SifnUpViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4DA22156FF000198655 /* SifnUpViewDelegate.swift */; };
+		4D9AC4DB22156FF000198655 /* SignUpViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4DA22156FF000198655 /* SignUpViewDelegate.swift */; };
+		4D9AC4DD22157FDF00198655 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4DC22157FDF00198655 /* RegisterUser.swift */; };
+		4D9AC4DF221580AA00198655 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4DE221580AA00198655 /* UserModel.swift */; };
+		4D9AC4E72215B55C00198655 /* ProfilViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4E62215B55C00198655 /* ProfilViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +65,10 @@
 		4D9AC4D42215584C00198655 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		4D9AC4D62215585E00198655 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		4D9AC4D822156FD900198655 /* SignInViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewDelegate.swift; sourceTree = "<group>"; };
-		4D9AC4DA22156FF000198655 /* SifnUpViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SifnUpViewDelegate.swift; sourceTree = "<group>"; };
+		4D9AC4DA22156FF000198655 /* SignUpViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewDelegate.swift; sourceTree = "<group>"; };
+		4D9AC4DC22157FDF00198655 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		4D9AC4DE221580AA00198655 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4D9AC4E62215B55C00198655 /* ProfilViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,20 +119,16 @@
 		4D9AC49922154CBB00198655 /* FebruaryFinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				4D9AC4E52215848D00198655 /* Singleton */,
+				4D9AC4E42215848300198655 /* Delegate */,
+				4D9AC4E32215844000198655 /* Controller */,
+				4D9AC4E22215843400198655 /* View */,
+				4D9AC4E12215842700198655 /* Model */,
 				4D9AC49A22154CBB00198655 /* AppDelegate.swift */,
 				4D9AC49E22154CBB00198655 /* Main.storyboard */,
 				4D9AC4A122154CBC00198655 /* Assets.xcassets */,
 				4D9AC4A322154CBC00198655 /* LaunchScreen.storyboard */,
 				4D9AC4A622154CBC00198655 /* Info.plist */,
-				4D9AC4C822154E8800198655 /* LoginViewController.swift */,
-				4D9AC4CA22154ED200198655 /* SignInView.xib */,
-				4D9AC4CC2215525400198655 /* SignUpView.xib */,
-				4D9AC4CE2215553A00198655 /* ProfilView.xib */,
-				4D9AC4D22215582E00198655 /* SignUpView.swift */,
-				4D9AC4D42215584C00198655 /* SignInView.swift */,
-				4D9AC4D62215585E00198655 /* ProfilView.swift */,
-				4D9AC4D822156FD900198655 /* SignInViewDelegate.swift */,
-				4D9AC4DA22156FF000198655 /* SifnUpViewDelegate.swift */,
 			);
 			path = FebruaryFinalProject;
 			sourceTree = "<group>";
@@ -147,6 +149,53 @@
 				4D9AC4BC22154CBC00198655 /* Info.plist */,
 			);
 			path = FebruaryFinalProjectUITests;
+			sourceTree = "<group>";
+		};
+		4D9AC4E12215842700198655 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D9AC4DE221580AA00198655 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D9AC4E22215843400198655 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D9AC4D42215584C00198655 /* SignInView.swift */,
+				4D9AC4D62215585E00198655 /* ProfilView.swift */,
+				4D9AC4D22215582E00198655 /* SignUpView.swift */,
+				4D9AC4CE2215553A00198655 /* ProfilView.xib */,
+				4D9AC4CC2215525400198655 /* SignUpView.xib */,
+				4D9AC4CA22154ED200198655 /* SignInView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D9AC4E32215844000198655 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D9AC4C822154E8800198655 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4D9AC4E42215848300198655 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4D9AC4D822156FD900198655 /* SignInViewDelegate.swift */,
+				4D9AC4DA22156FF000198655 /* SignUpViewDelegate.swift */,
+				4D9AC4E62215B55C00198655 /* ProfilViewDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		4D9AC4E52215848D00198655 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				4D9AC4DC22157FDF00198655 /* RegisterUser.swift */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,11 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D9AC4D32215582E00198655 /* SignUpView.swift in Sources */,
-				4D9AC4DB22156FF000198655 /* SifnUpViewDelegate.swift in Sources */,
+				4D9AC4DD22157FDF00198655 /* RegisterUser.swift in Sources */,
+				4D9AC4DB22156FF000198655 /* SignUpViewDelegate.swift in Sources */,
 				4D9AC4C922154E8800198655 /* LoginViewController.swift in Sources */,
 				4D9AC4D72215585E00198655 /* ProfilView.swift in Sources */,
 				4D9AC49B22154CBB00198655 /* AppDelegate.swift in Sources */,
 				4D9AC4D52215584C00198655 /* SignInView.swift in Sources */,
+				4D9AC4E72215B55C00198655 /* ProfilViewDelegate.swift in Sources */,
+				4D9AC4DF221580AA00198655 /* UserModel.swift in Sources */,
 				4D9AC4D922156FD900198655 /* SignInViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

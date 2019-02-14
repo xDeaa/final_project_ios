@@ -11,6 +11,9 @@ import UIKit
 class SignInView: UIView {
 
    @IBOutlet var contentView: UIView!
+    @IBOutlet var email: UITextField!
+    @IBOutlet var password: UITextField!
+    var delegate : SignInDelegate?
     
     
     override init(frame: CGRect) {
@@ -30,5 +33,18 @@ class SignInView: UIView {
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
-
+    @IBAction func register(_ sender: Any) {
+        delegate?.goToRegister()
+    }
+    
+    @IBAction func login(_ sender: Any) {
+        let textEmail = email.text ?? ""
+        let textPassword = password.text ?? ""
+        
+        delegate?.login(email: textEmail, password: textPassword)
+        
+        
+        
+    }
+    
 }

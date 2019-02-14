@@ -1,5 +1,5 @@
 //
-//  SifnUpViewDelegate.swift
+//  RegisterUser.swift
 //  FebruaryFinalProject
 //
 //  Created by Andrea SERRANO on 14/02/2019.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol SignUpDelegate {
-     func getToLogin()
+class RegisterUser{
+    
+   static var user: UserModel?
 }

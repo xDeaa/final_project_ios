@@ -1,5 +1,5 @@
 //
-//  SignInViewDelegate.swift
+//  SifnUpViewDelegate.swift
 //  FebruaryFinalProject
 //
 //  Created by Andrea SERRANO on 14/02/2019.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-protocol SignInDelegate {
+protocol SignUpDelegate {
     
-   
+     func goToLogin()
+    func register(mail: String, password: String, confirm_password: String)
 }
