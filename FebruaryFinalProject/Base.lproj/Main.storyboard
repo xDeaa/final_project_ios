@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,22 +15,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="FebruaryFinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-QT-hjm" customClass="SignInView" customModule="FebruaryFinalProject" customModuleProvider="target">
-                                <rect key="frame" x="8" y="8" width="398" height="880"/>
+                                <rect key="frame" x="8" y="8" width="359" height="651"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5a-rN-Tsa" customClass="SignUpView" customModule="FebruaryFinalProject" customModuleProvider="target">
-                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <rect key="frame" x="8" y="28" width="359" height="680"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="680" id="lAX-VI-giE"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUr-4N-Fqx" customClass="ProfilView" customModule="FebruaryFinalProject" customModuleProvider="target">
-                                <rect key="frame" x="8" y="108" width="398" height="680"/>
+                                <rect key="frame" x="8" y="-6.5" width="359" height="680"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="680" id="VI7-ju-sQG"/>
@@ -42,13 +42,12 @@
                             <constraint firstItem="GUr-4N-Fqx" firstAttribute="trailing" secondItem="0mX-QT-hjm" secondAttribute="trailing" id="4oK-EY-ozO"/>
                             <constraint firstItem="GUr-4N-Fqx" firstAttribute="leading" secondItem="0mX-QT-hjm" secondAttribute="leading" id="6Yp-OG-bGj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b5a-rN-Tsa" secondAttribute="trailing" constant="8" id="95E-uV-46n"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b5a-rN-Tsa" secondAttribute="bottom" constant="8" id="HQi-ab-28w"/>
                             <constraint firstItem="b5a-rN-Tsa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="gvn-0f-syh"/>
                             <constraint firstItem="GUr-4N-Fqx" firstAttribute="centerY" secondItem="0mX-QT-hjm" secondAttribute="centerY" id="niW-dU-IrB"/>
                             <constraint firstItem="0mX-QT-hjm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="qS8-nO-Le3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0mX-QT-hjm" secondAttribute="trailing" constant="8" id="uEF-Rd-PTB"/>
                             <constraint firstItem="b5a-rN-Tsa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="xI9-Ms-DL2"/>
-                            <constraint firstItem="GUr-4N-Fqx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xsD-hf-ogX"/>
+                            <constraint firstItem="GUr-4N-Fqx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10" id="xsD-hf-ogX"/>
                             <constraint firstItem="0mX-QT-hjm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="zH9-c6-BBp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

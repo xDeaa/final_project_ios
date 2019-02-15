@@ -25,6 +25,7 @@
 		4D9AC4DD22157FDF00198655 /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4DC22157FDF00198655 /* RegisterUser.swift */; };
 		4D9AC4DF221580AA00198655 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4DE221580AA00198655 /* UserModel.swift */; };
 		4D9AC4E72215B55C00198655 /* ProfilViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AC4E62215B55C00198655 /* ProfilViewDelegate.swift */; };
+		4DF19D942216DB3200DC2569 /* FormateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF19D932216DB3200DC2569 /* FormateDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		4D9AC4DC22157FDF00198655 /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		4D9AC4DE221580AA00198655 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4D9AC4E62215B55C00198655 /* ProfilViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewDelegate.swift; sourceTree = "<group>"; };
+		4DF19D932216DB3200DC2569 /* FormateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormateDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				4D9AC4D822156FD900198655 /* SignInViewDelegate.swift */,
 				4D9AC4DA22156FF000198655 /* SignUpViewDelegate.swift */,
 				4D9AC4E62215B55C00198655 /* ProfilViewDelegate.swift */,
+				4DF19D932216DB3200DC2569 /* FormateDelegate.swift */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				4D9AC4DD22157FDF00198655 /* RegisterUser.swift in Sources */,
 				4D9AC4DB22156FF000198655 /* SignUpViewDelegate.swift in Sources */,
 				4D9AC4C922154E8800198655 /* LoginViewController.swift in Sources */,
+				4DF19D942216DB3200DC2569 /* FormateDelegate.swift in Sources */,
 				4D9AC4D72215585E00198655 /* ProfilView.swift in Sources */,
 				4D9AC49B22154CBB00198655 /* AppDelegate.swift in Sources */,
 				4D9AC4D52215584C00198655 /* SignInView.swift in Sources */,

@@ -8,8 +8,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, ProfilDelegate{
+class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, ProfilDelegate, FormatDelegate{
     
+    func validateFields() -> Bool {
+        return false
+    }
     
     @IBOutlet var signUp: SignUpView!
     @IBOutlet var signIn: SignInView!
@@ -46,8 +49,13 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
     
     func register(mail: String, password: String, confirm_password: String) {
         
+        
         if mail == "" && password == "" || confirm_password == "" {
            signUp.error.text = "Please enter the fields"
+        }else if  !mail.isValidEmail() {
+            signUp.error.text = "Email is not valid (mail@mail.com)"
+        }else if password.count < 8 {
+            signUp.error.text = "The password have to containt 8 characters"
         }else if password != confirm_password {
             signUp.error.text = "The passwords don't match"
         }else {
@@ -88,12 +96,16 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
         
         if password == "" || new_password == "" {
             profil.error.text = "Please enter your passwords"
+            profil.success.text = ""
         }else{
             
             if password != new_password {
                 profil.error.text = "Password are not matching"
+                profil.success.text = ""
             }else {
                 RegisterUser.user?.password = password
+                profil.success.text = "Password change is a success"
+                self.eraseField()
             }
         }
     }
@@ -105,7 +117,6 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
     
     func eraseField() {
         
-        profil.success.text = ""
         profil.password.text = ""
         profil.new_password.text = ""
         profil.error.text = ""
