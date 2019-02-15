@@ -11,5 +11,6 @@ import Foundation
 protocol ProfilDelegate {
     
     func goToLogin()
-    func changeInfo(mail: String, password: String, new_password: String)
+    func changeInfo(password: String, new_password: String)
+    func mail()
 }

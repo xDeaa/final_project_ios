@@ -12,6 +12,9 @@ class ProfilView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet var mail: UILabel!
+    @IBOutlet var password: UITextField!
+    @IBOutlet var new_password: UITextField!
+    @IBOutlet var error: UILabel!    
     
     var delegate : ProfilDelegate?
     
@@ -35,6 +38,9 @@ class ProfilView: UIView {
     
     @IBAction func login(_ sender: Any) {
         delegate?.goToLogin()
+    }
+    @IBAction func changePassword(_ sender: Any) {
+        delegate?.changeInfo(password: password.text ?? "", new_password: new_password.text ?? "")
     }
     
 }

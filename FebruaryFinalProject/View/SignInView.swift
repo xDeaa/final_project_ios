@@ -13,8 +13,10 @@ class SignInView: UIView {
    @IBOutlet var contentView: UIView!
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
-    var delegate : SignInDelegate?
+    @IBOutlet var error: UILabel!
+    @IBOutlet var success: UILabel!
     
+    var delegate : SignInDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

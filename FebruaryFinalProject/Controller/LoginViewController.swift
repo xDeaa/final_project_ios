@@ -9,14 +9,11 @@
 import UIKit
 
 class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, ProfilDelegate{
-    func changeInfo(mail: String, password: String, new_password: String) {
-        
-    }
+    
     
     @IBOutlet var signUp: SignUpView!
     @IBOutlet var signIn: SignInView!
     @IBOutlet var profil: ProfilView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,59 +45,69 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
     
     func register(mail: String, password: String, confirm_password: String) {
         
-        if mail == "" || password == "" || confirm_password == "" {
-           print("Please enter the field")
+        if mail == "" && password == "" || confirm_password == "" {
+           signUp.error.text = "Please enter the fields"
         }else if password != confirm_password {
-            print("The password is different to confirmation")
+            signUp.error.text = "The passwords don't match"
         }else {
             
             let user = UserModel(email: mail, password: password)
             RegisterUser.user = user
+            signUp.confirm_password.text = ""
+            signUp.password.text = ""
+            signUp.email.text = ""
+            signUp.error.text = ""
+            signUp.success.text = "Successfuly sign up"
             self.goToLogin()
         }
         
     }
     
     func login(email: String, password: String){
-       
+        
         let userEmail = RegisterUser.user?.email ?? ""
         let userPassword = RegisterUser.user?.password ?? ""
         
-//        guard RegisterUser.user != nil else {
-//            print("Please register first")
-//            return
-//        }
-//
-//        guard email != "" else {
-//            print("Please enter your email")
-//            return
-//        }
-//
-//        guard password != "" else {
-//            print("Please enter your password")
-//            return
-//        }
-        if RegisterUser.user == nil {
-            print("Please register first")
+        if email == "" || password == "" {
+            signIn.error.text = "Please enter your information"
         }else{
             
-            if email == "" || password == "" {
-                print("Please enter your information")
-            }else if userEmail != email && userPassword != password {
-                print("Email or password are invalid")
+            if RegisterUser.user == nil {
+                signIn.error.text = "Please register first"
+            }else if userEmail != email || userPassword != password {
+                signIn.error.text = "Email or password incorrect"
             }else {
                 print("Successful login")
+                signIn.email.text = ""
+                signIn.password.text = ""
+                signIn.error.text = ""
+                signIn.success.text = "Successfuly login"
+                self.mail()
                 self.goToProfil()
+            }
+        }
+    }
+    
+    func changeInfo(password: String, new_password: String) {
+        if password == "" || new_password == "" {
+            profil.error.text = "Please enter your passwords"
+        }else{
+            if password != new_password {
+                profil.error.text = "Password are not matching"
+            }else {
+                RegisterUser.user?.password = password
+                profil.password.text = ""
+                profil.new_password.text = ""
+                print("Password change successfuly")
             }
             
         }
-        
-//        guard textEmail == userEmail && textPassword == userPassword else {
-//            print("Unable to find a match with this pair of email / password")
-//            return
-//        }
     }
     
+    func mail() {
+        let userEmail = RegisterUser.user?.email ?? ""
+        profil.mail.text = "Email: \(userEmail)"
+    }
     
 
 }

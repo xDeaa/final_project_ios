@@ -15,6 +15,8 @@ class SignUpView: UIView {
     @IBOutlet var password: UITextField!
     @IBOutlet var confirm_password: UITextField!
     @IBOutlet var signUp: UIButton!
+    @IBOutlet var error: UILabel!
+    @IBOutlet var success: UILabel!
     
     var delegate : SignUpDelegate?
     
@@ -37,6 +39,7 @@ class SignUpView: UIView {
     }
     
     @IBAction func login(_ sender: Any) {
+        
         delegate?.goToLogin()
     }
     
