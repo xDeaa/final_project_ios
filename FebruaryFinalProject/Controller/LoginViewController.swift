@@ -21,26 +21,27 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
         signIn.delegate = self
         profil.delegate = self
         self.goToRegister()
-        
     }
     
     func goToLogin() {
         signUp.isHidden = true
         signIn.isHidden = false
         profil.isHidden = true
-
+        self.eraseField()
     }
     
     func goToRegister() {
         signUp.isHidden = false
         signIn.isHidden = true
         profil.isHidden = true
+        self.eraseField()
     }
     
     func goToProfil() {
         signIn.isHidden = true
         signUp.isHidden = true
         profil.isHidden = false
+        self.eraseField()
     }
     
     func register(mail: String, password: String, confirm_password: String) {
@@ -53,10 +54,7 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
             
             let user = UserModel(email: mail, password: password)
             RegisterUser.user = user
-            signUp.confirm_password.text = ""
-            signUp.password.text = ""
-            signUp.email.text = ""
-            signUp.error.text = ""
+            
             signUp.success.text = "Successfuly sign up"
             self.goToLogin()
         }
@@ -78,10 +76,8 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
                 signIn.error.text = "Email or password incorrect"
             }else {
                 print("Successful login")
-                signIn.email.text = ""
-                signIn.password.text = ""
-                signIn.error.text = ""
                 signIn.success.text = "Successfuly login"
+                
                 self.mail()
                 self.goToProfil()
             }
@@ -89,18 +85,16 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
     }
     
     func changeInfo(password: String, new_password: String) {
+        
         if password == "" || new_password == "" {
             profil.error.text = "Please enter your passwords"
         }else{
+            
             if password != new_password {
                 profil.error.text = "Password are not matching"
             }else {
                 RegisterUser.user?.password = password
-                profil.password.text = ""
-                profil.new_password.text = ""
-                print("Password change successfuly")
             }
-            
         }
     }
     
@@ -109,5 +103,24 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
         profil.mail.text = "Email: \(userEmail)"
     }
     
+    func eraseField() {
+        
+        profil.success.text = ""
+        profil.password.text = ""
+        profil.new_password.text = ""
+        profil.error.text = ""
+        
+        signUp.success.text = ""
+        signUp.error.text = ""
+        signUp.confirm_password.text = ""
+        signUp.password.text = ""
+        signUp.email.text = ""
+        
+        signIn.error.text = ""
+        signIn.success.text = ""
+        signIn.email.text = ""
+        signIn.password.text = ""
+        
+    }
 
 }

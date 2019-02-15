@@ -15,13 +15,13 @@ class ProfilView: UIView {
     @IBOutlet var password: UITextField!
     @IBOutlet var new_password: UITextField!
     @IBOutlet var error: UILabel!    
+    @IBOutlet var success: UILabel!
     
     var delegate : ProfilDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,6 +39,7 @@ class ProfilView: UIView {
     @IBAction func login(_ sender: Any) {
         delegate?.goToLogin()
     }
+    
     @IBAction func changePassword(_ sender: Any) {
         delegate?.changeInfo(password: password.text ?? "", new_password: new_password.text ?? "")
     }
