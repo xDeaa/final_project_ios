@@ -171,6 +171,7 @@
             <variation key="heightClass=regular-widthClass=regular">
                 <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </variation>
+            <point key="canvasLocation" x="47.826086956521742" y="91.741071428571431"/>
         </view>
     </objects>
 </document>
