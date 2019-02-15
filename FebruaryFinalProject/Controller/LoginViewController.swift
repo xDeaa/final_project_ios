@@ -49,8 +49,7 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
     
     func register(mail: String, password: String, confirm_password: String) {
         
-        
-        if mail == "" && password == "" || confirm_password == "" {
+        if mail.isEmpty && password.isEmpty || confirm_password.isEmpty {
            signUp.error.text = "Please enter the fields"
         }else if  !mail.isValidEmail() {
             signUp.error.text = "Email is not valid (mail@mail.com)"
@@ -66,7 +65,6 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
             signUp.success.text = "Successfuly sign up"
             self.goToLogin()
         }
-        
     }
     
     func login(email: String, password: String){
@@ -74,7 +72,7 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
         let userEmail = RegisterUser.user?.email ?? ""
         let userPassword = RegisterUser.user?.password ?? ""
         
-        if email == "" || password == "" {
+        if email.isEmpty || password.isEmpty {
             signIn.error.text = "Please enter your information"
         }else{
             
@@ -94,7 +92,7 @@ class LoginViewController: UIViewController, SignUpDelegate, SignInDelegate, Pro
     
     func changeInfo(password: String, new_password: String) {
         
-        if password == "" || new_password == "" {
+        if password.isEmpty || new_password.isEmpty {
             profil.error.text = "Please enter your passwords"
             profil.success.text = ""
         }else{
